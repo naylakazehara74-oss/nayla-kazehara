@@ -3,16 +3,12 @@
 :root {
   --black: #07070a;
   --dark: #0d0c12;
-
   --white: #f5f2fa;
   --gray: #96919e;
-
   --purple: #b89aff;
   --purple-soft: #d8caff;
-
   --border: rgba(255,255,255,0.09);
 }
-
 
 /* RESET */
 
@@ -103,13 +99,14 @@ body {
   min-height: 100vh;
 
   display: grid;
+
   grid-template-columns: 1fr 1fr;
 
   align-items: center;
 
-  gap: 4vw;
+  gap: 2vw;
 
-  padding: 120px 8% 70px;
+  padding: 110px 6% 60px;
 
   position: relative;
 }
@@ -125,6 +122,7 @@ body {
   color: var(--purple-soft);
 
   font-size: 11px;
+
   font-weight: 600;
 
   letter-spacing: 0.35em;
@@ -216,17 +214,20 @@ body {
 }
 
 
-/* NAYLA VISUAL */
+/* NAYLA IMAGE */
 
 .hero-visual {
-  min-height: 600px;
+  min-height: 620px;
 
   display: flex;
 
   align-items: center;
+
   justify-content: center;
 
   position: relative;
+
+  overflow: visible;
 
   z-index: 2;
 }
@@ -234,7 +235,7 @@ body {
 .glow {
   position: absolute;
 
-  width: 65%;
+  width: 70%;
 
   aspect-ratio: 1;
 
@@ -246,17 +247,23 @@ body {
 }
 
 .nayla-image {
+  display: block;
+
   position: relative;
 
-  z-index: 2;
+  z-index: 3;
 
-  width: min(90%, 560px);
+  width: 100%;
 
-  max-height: 650px;
+  max-width: 620px;
+
+  height: auto;
 
   object-fit: contain;
 
   transform: rotate(-90deg);
+
+  transform-origin: center center;
 
   mix-blend-mode: screen;
 
@@ -389,6 +396,7 @@ body {
   text-align: center;
 
   border-top: 1px solid var(--border);
+
   border-bottom: 1px solid var(--border);
 
   background:
@@ -483,9 +491,9 @@ footer p {
 
     grid-template-columns: 1fr;
 
-    gap: 10px;
+    gap: 0;
 
-    padding: 110px 24px 70px;
+    padding: 105px 20px 50px;
 
     text-align: center;
   }
@@ -507,16 +515,27 @@ footer p {
     flex-wrap: wrap;
   }
 
-  .hero-visual {
-    min-height: 420px;
 
-    margin-top: 0;
+  .hero-visual {
+    min-height: 400px;
+
+    width: 100%;
+
+    margin-top: 10px;
+
+    overflow: visible;
+  }
+
+  .glow {
+    width: 80%;
   }
 
   .nayla-image {
-    width: 92%;
+    width: 115%;
 
-    max-height: 420px;
+    max-width: 560px;
+
+    height: auto;
 
     transform: rotate(-90deg);
   }
