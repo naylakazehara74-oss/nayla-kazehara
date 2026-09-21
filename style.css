@@ -63,7 +63,7 @@ body {
 
   padding: 0 7%;
 
-  background: rgba(7,7,10,0.72);
+  background: rgba(7,7,10,0.78);
 
   backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(18px);
@@ -80,6 +80,7 @@ body {
   text-decoration: none;
 
   font-size: 17px;
+
   font-weight: 600;
 
   letter-spacing: 0.38em;
@@ -122,7 +123,7 @@ body {
 
   align-items: center;
 
-  gap: 5vw;
+  gap: 4vw;
 
   padding: 120px 8% 70px;
 
@@ -133,7 +134,7 @@ body {
 .hero-content {
   position: relative;
 
-  z-index: 2;
+  z-index: 5;
 }
 
 
@@ -181,7 +182,9 @@ body {
 }
 
 
-/* BUTTONS */
+/* =========================
+   BUTTONS
+========================= */
 
 .buttons {
   display: flex;
@@ -245,7 +248,7 @@ body {
 
 
 /* =========================
-   NAYLA IMAGE
+   NAYLA VISUAL
 ========================= */
 
 .hero-visual {
@@ -288,29 +291,27 @@ body {
 
   object-fit: contain;
 
+  /*
+    Gambar asli Nayla perlu diputar 90 derajat.
+    Rotasi dibuat PERMANEN di sini.
+  */
+
+  transform: rotate(90deg);
+
+  /*
+    Membantu menyamarkan background hitam
+    dari file gambar.
+  */
+
+  mix-blend-mode: screen;
+
   filter:
     drop-shadow(
       0 25px 60px rgba(0,0,0,0.6)
     )
     drop-shadow(
-      0 0 35px rgba(185,155,255,0.18)
+      0 0 35px rgba(185,155,255,0.2)
     );
-
-  animation: floating 7s ease-in-out infinite;
-}
-
-
-@keyframes floating {
-
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-
-  50% {
-    transform: translateY(-10px);
-  }
-
 }
 
 
@@ -403,8 +404,7 @@ body {
 
   transition:
     transform 0.35s ease,
-    border-color 0.35s ease,
-    background 0.35s ease;
+    border-color 0.35s ease;
 }
 
 
@@ -413,13 +413,6 @@ body {
 
   border-color:
     rgba(185,154,255,0.35);
-
-  background:
-    linear-gradient(
-      145deg,
-      rgba(185,154,255,0.08),
-      rgba(255,255,255,0.015)
-    );
 }
 
 
@@ -548,10 +541,10 @@ footer p {
 
     grid-template-columns: 1fr;
 
-    gap: 20px;
+    gap: 10px;
 
     padding:
-      115px
+      110px
       24px
       70px;
 
@@ -586,16 +579,23 @@ footer p {
 
 
   .hero-visual {
-    min-height: 430px;
+    min-height: 420px;
 
-    margin-top: 10px;
+    margin-top: 0;
   }
 
 
   .nayla-image {
-    width: 95%;
+    width: 92%;
 
-    max-height: 430px;
+    max-height: 420px;
+
+    /*
+      Tetap 90 derajat di HP.
+      Tidak diubah oleh animasi.
+    */
+
+    transform: rotate(90deg);
   }
 
 
