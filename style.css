@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600&display=swap');
 
-
 :root {
   --black: #07070a;
   --dark: #0d0c12;
@@ -15,17 +14,17 @@
 }
 
 
+/* RESET */
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-
 html {
   scroll-behavior: smooth;
 }
-
 
 body {
   background:
@@ -37,20 +36,15 @@ body {
     var(--black);
 
   color: var(--white);
-
   font-family: "Inter", sans-serif;
-
   overflow-x: hidden;
 }
 
 
-/* =========================
-   NAVBAR
-========================= */
+/* NAVBAR */
 
 .navbar {
   position: fixed;
-
   top: 0;
   left: 0;
 
@@ -73,26 +67,20 @@ body {
   z-index: 100;
 }
 
-
 .brand {
   color: var(--white);
-
   text-decoration: none;
 
   font-size: 17px;
-
   font-weight: 600;
 
   letter-spacing: 0.38em;
 }
 
-
 .navbar nav {
   display: flex;
-
   gap: 32px;
 }
-
 
 .navbar nav a {
   color: var(--gray);
@@ -104,21 +92,17 @@ body {
   transition: color 0.3s ease;
 }
 
-
 .navbar nav a:hover {
   color: var(--purple-soft);
 }
 
 
-/* =========================
-   HERO
-========================= */
+/* HERO */
 
 .hero {
   min-height: 100vh;
 
   display: grid;
-
   grid-template-columns: 1fr 1fr;
 
   align-items: center;
@@ -130,13 +114,10 @@ body {
   position: relative;
 }
 
-
 .hero-content {
   position: relative;
-
   z-index: 5;
 }
-
 
 .eyebrow {
   margin-bottom: 24px;
@@ -144,12 +125,10 @@ body {
   color: var(--purple-soft);
 
   font-size: 11px;
-
   font-weight: 600;
 
   letter-spacing: 0.35em;
 }
-
 
 .hero h1 {
   font-family: "Cormorant Garamond", serif;
@@ -163,11 +142,9 @@ body {
   font-weight: 600;
 }
 
-
 .hero h1 span {
   color: var(--purple);
 }
-
 
 .description {
   max-width: 480px;
@@ -182,9 +159,7 @@ body {
 }
 
 
-/* =========================
-   BUTTONS
-========================= */
+/* BUTTONS */
 
 .buttons {
   display: flex;
@@ -193,7 +168,6 @@ body {
 
   margin-top: 36px;
 }
-
 
 .btn {
   display: inline-flex;
@@ -215,11 +189,9 @@ body {
     border-color 0.3s ease;
 }
 
-
 .btn:hover {
   transform: translateY(-3px);
 }
-
 
 .btn.primary {
   color: #18121f;
@@ -227,11 +199,9 @@ body {
   background: var(--purple);
 }
 
-
 .btn.primary:hover {
   background: var(--purple-soft);
 }
-
 
 .btn.secondary {
   color: var(--white);
@@ -241,15 +211,12 @@ body {
   background: rgba(255,255,255,0.02);
 }
 
-
 .btn.secondary:hover {
   border-color: rgba(185,154,255,0.4);
 }
 
 
-/* =========================
-   NAYLA VISUAL
-========================= */
+/* NAYLA VISUAL */
 
 .hero-visual {
   min-height: 600px;
@@ -263,7 +230,6 @@ body {
 
   z-index: 2;
 }
-
 
 .glow {
   position: absolute;
@@ -279,7 +245,6 @@ body {
   border-radius: 50%;
 }
 
-
 .nayla-image {
   position: relative;
 
@@ -291,33 +256,17 @@ body {
 
   object-fit: contain;
 
-  /*
-    Gambar asli Nayla perlu diputar 90 derajat.
-    Rotasi dibuat PERMANEN di sini.
-  */
-
-  transform: rotate(90deg);
-
-  /*
-    Membantu menyamarkan background hitam
-    dari file gambar.
-  */
+  transform: rotate(-90deg);
 
   mix-blend-mode: screen;
 
   filter:
-    drop-shadow(
-      0 25px 60px rgba(0,0,0,0.6)
-    )
-    drop-shadow(
-      0 0 35px rgba(185,155,255,0.2)
-    );
+    drop-shadow(0 25px 60px rgba(0,0,0,0.6))
+    drop-shadow(0 0 35px rgba(185,155,255,0.2));
 }
 
 
-/* =========================
-   SECTIONS
-========================= */
+/* SECTIONS */
 
 .section {
   max-width: 1150px;
@@ -326,7 +275,6 @@ body {
 
   padding: 140px 8%;
 }
-
 
 .section-label {
   margin-bottom: 25px;
@@ -340,7 +288,6 @@ body {
   letter-spacing: 0.3em;
 }
 
-
 .section h2 {
   font-family: "Cormorant Garamond", serif;
 
@@ -353,11 +300,9 @@ body {
   font-weight: 600;
 }
 
-
 .section h2 span {
   color: var(--purple);
 }
-
 
 .section-text {
   max-width: 600px;
@@ -370,21 +315,17 @@ body {
 }
 
 
-/* =========================
-   FEATURES
-========================= */
+/* FEATURES */
 
 .feature-grid {
   display: grid;
 
-  grid-template-columns:
-    repeat(3, 1fr);
+  grid-template-columns: repeat(3, 1fr);
 
   gap: 18px;
 
   margin-top: 55px;
 }
-
 
 .feature-card {
   min-height: 250px;
@@ -407,14 +348,11 @@ body {
     border-color 0.35s ease;
 }
 
-
 .feature-card:hover {
   transform: translateY(-7px);
 
-  border-color:
-    rgba(185,154,255,0.35);
+  border-color: rgba(185,154,255,0.35);
 }
-
 
 .feature-card span {
   color: var(--purple);
@@ -424,7 +362,6 @@ body {
   letter-spacing: 0.15em;
 }
 
-
 .feature-card h3 {
   margin-top: 45px;
 
@@ -432,7 +369,6 @@ body {
 
   font-size: 32px;
 }
-
 
 .feature-card p {
   margin-top: 10px;
@@ -445,9 +381,7 @@ body {
 }
 
 
-/* =========================
-   PROJECT
-========================= */
+/* PROJECT */
 
 .project {
   padding: 160px 8%;
@@ -455,7 +389,6 @@ body {
   text-align: center;
 
   border-top: 1px solid var(--border);
-
   border-bottom: 1px solid var(--border);
 
   background:
@@ -466,6 +399,19 @@ body {
     );
 }
 
+.coming-soon {
+  margin-bottom: 24px;
+
+  color: var(--purple-soft);
+
+  font-size: 10px;
+
+  font-weight: 600;
+
+  letter-spacing: 0.32em;
+
+  text-transform: uppercase;
+}
 
 .project h2 {
   font-family: "Cormorant Garamond", serif;
@@ -479,17 +425,18 @@ body {
   font-weight: 600;
 }
 
-
-.project p:last-child {
-  margin-top: 30px;
+.project-status {
+  margin-top: 32px;
 
   color: var(--gray);
+
+  font-size: 13px;
+
+  line-height: 1.8;
 }
 
 
-/* =========================
-   FOOTER
-========================= */
+/* FOOTER */
 
 footer {
   padding: 65px 8%;
@@ -498,7 +445,6 @@ footer {
 
   background: #050507;
 }
-
 
 .footer-logo {
   margin-bottom: 14px;
@@ -510,7 +456,6 @@ footer {
   letter-spacing: 0.4em;
 }
 
-
 footer p {
   color: #68636e;
 
@@ -518,9 +463,7 @@ footer p {
 }
 
 
-/* =========================
-   MOBILE
-========================= */
+/* MOBILE */
 
 @media (max-width: 800px) {
 
@@ -529,7 +472,6 @@ footer p {
 
     padding: 0 22px;
   }
-
 
   .navbar nav {
     display: none;
@@ -543,33 +485,21 @@ footer p {
 
     gap: 10px;
 
-    padding:
-      110px
-      24px
-      70px;
+    padding: 110px 24px 70px;
 
     text-align: center;
   }
 
-
   .hero h1 {
-    font-size:
-      clamp(
-        3.6rem,
-        17vw,
-        5rem
-      );
+    font-size: clamp(3.6rem, 17vw, 5rem);
   }
-
 
   .description {
     margin-left: auto;
-
     margin-right: auto;
 
     font-size: 14px;
   }
-
 
   .buttons {
     justify-content: center;
@@ -577,25 +507,18 @@ footer p {
     flex-wrap: wrap;
   }
 
-
   .hero-visual {
     min-height: 420px;
 
     margin-top: 0;
   }
 
-
   .nayla-image {
     width: 92%;
 
     max-height: 420px;
 
-    /*
-      Tetap 90 derajat di HP.
-      Tidak diubah oleh animasi.
-    */
-
-    transform: rotate(90deg);
+    transform: rotate(-90deg);
   }
 
 
@@ -603,14 +526,8 @@ footer p {
     padding: 100px 24px;
   }
 
-
   .section h2 {
-    font-size:
-      clamp(
-        3rem,
-        15vw,
-        5rem
-      );
+    font-size: clamp(3rem, 15vw, 5rem);
   }
 
 
@@ -619,7 +536,6 @@ footer p {
 
     margin-top: 45px;
   }
-
 
   .feature-card {
     min-height: 220px;
@@ -630,14 +546,18 @@ footer p {
     padding: 120px 24px;
   }
 
-
   .project h2 {
-    font-size:
-      clamp(
-        3.5rem,
-        18vw,
-        6rem
-      );
+    font-size: clamp(3.5rem, 18vw, 6rem);
+  }
+
+  .coming-soon {
+    font-size: 9px;
+
+    letter-spacing: 0.28em;
+  }
+
+  .project-status {
+    font-size: 12px;
   }
 
 
