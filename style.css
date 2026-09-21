@@ -196,7 +196,7 @@ h1 span {
 }
 
 .nayla-image {
-  rotate: 90deg;
+  rotate: -90deg;
   width: 100%;
   height: 100%;
 
